@@ -2,7 +2,7 @@ const path = require("path");
 
 const config = {
     target: 'web',
-    entry: path.join(__dirname, 'src/index.js'),
+    entry: path.join(__dirname, '../src/index.js'),
     output: {
         filename: 'bundle.[hash:8].js',
         path: path.join(__dirname, 'dist')
@@ -27,7 +27,7 @@ const config = {
                         loader: 'url-loader',
                         options: {
                             limit: 1024,  // 文件小于1024字节，转换成base64编码，写入文件里面
-                            name: '[name]-output.[ext]'
+                            name: 'resources/[path][name]-[hash:8].[ext]'
                         }
                     }
                 ]
