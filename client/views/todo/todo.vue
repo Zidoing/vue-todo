@@ -8,10 +8,10 @@
     >
     <item :todo="todo" v-for="todo in filteredTodos" :key="todo.id" @del="deleteTodo"/>
     <Tabs
-        :filter="filter"
-        :todos="todos"
-        @toggle="toggleFilter"
-        @clearAllCompleted="clearAllTodos"
+      :filter="filter"
+      :todos="todos"
+      @toggle="toggleFilter"
+      @clearAllCompleted="clearAllTodos"
     />
   </section>
 </template>
