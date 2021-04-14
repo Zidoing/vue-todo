@@ -15,7 +15,9 @@ const default_plugins = [
       NODE_ENV: isDev ? '"development"' : '"production"'
     }
   }),
-  new HTMLPlugin()
+  new HTMLPlugin({
+    template: path.join(__dirname, "template.html")
+  })
 ]
 
 let config;
@@ -27,7 +29,7 @@ const devServer = {
   overlay: {
     errors: true
   },
-
+  historyApiFallback: true,
   hot: true
 };
 
